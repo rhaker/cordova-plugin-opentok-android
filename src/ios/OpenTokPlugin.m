@@ -46,6 +46,8 @@
     NSString* apiKey = [command.arguments objectAtIndex:0];
     NSString* sessionId = [command.arguments objectAtIndex:1];
     
+    _session = nil;
+    
     // Create Session
     _session = [[OTSession alloc] initWithApiKey: apiKey sessionId:sessionId delegate:self];
     
@@ -168,7 +170,7 @@
     if (_publisher) {
         [_publisher.view removeFromSuperview];
     }
-    
+    _publisher=nil;
     // Return to Javascript
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
