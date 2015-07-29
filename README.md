@@ -1,4 +1,7 @@
-Cordova Plugin for OpenTok iOS
+Cordova Plugin for OpenTok Android
+NOT LATEST BECAUSE OF SIZING BUG (https://github.com/songz/cordova-plugin-opentok/issues/187)
+-NEED TO COPY android sdk v2.5 over v2.3 in platforms/ folder because of openssl warning by Google Play
+
 ===
 
 Weave video chat into your web (and now mobile!) application.
